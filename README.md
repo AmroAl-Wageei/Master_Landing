@@ -9,4 +9,8 @@ Landing Page
  1) Happy Client 
  2) Our Value 
  3) Main 
+ 
+ 24-14 --> Footer , our story section
+ 
+ 25-12 --> Contact Us Page
 
