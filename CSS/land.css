@@ -232,6 +232,17 @@ ul li a:hover {
 /* Navbar End */
 
 
+
+
+
+
+
+
+
+
+
+
+
 /* Background  Start */
 
  /* .content {
@@ -399,7 +410,7 @@ margin-right: 6%;
 
  /* Scroll bar */
  ::-webkit-scrollbar {
-    width: 10px;
+    width: 7px;
  }
  ::-webkit-scrollbar-track {
     background-color: #f6f6f6;
@@ -407,7 +418,7 @@ margin-right: 6%;
  }
  ::-webkit-scrollbar-thumb {
     background-color: #206A5D;
-    border-radius: 20px;
+    border-radius: 0px;
  }
  ::-webkit-scrollbar-thumb:hover {
     background-color: #1F4068;
@@ -415,17 +426,20 @@ margin-right: 6%;
   /* End Scroll bar */
 
 
+
+
+
  /* Scroll UP */
 
  .up {
     position: fixed;
-    bottom: 10px;
+    bottom: 100px;
     right: -70px;
     background-color: #206A5D;
     color: #DDD;
     font-weight: bold;
     font-size: 20px;
-    padding: 5px;
+    padding: 7px;
     border-radius: 4px;
     font-family: Arial,Tahoma;
     cursor: pointer;
@@ -439,12 +453,16 @@ margin-right: 6%;
  }
 
  .up.show {
-    right: 25px;
+    right: 35px;
  }
   /* End Scroll UP */
 
 
 
+
+
+  /* ################################################################################################################################# */
+/* ################################################################################################################################# */
 
 
 /* Coming Soon Page */
@@ -722,6 +740,9 @@ margin-right: 6%;
 
 /* Our value */
 
+.cont_value {
+    display: none;
+}
 
 .cont_value h1,h3 {
     text-align: center;
@@ -1167,13 +1188,13 @@ margin-bottom: 25px;
 /* Contact US PAGE  */
 
 .contact_bg {
-    height: 70vh;
+    height: 60vh;
     background: url('../Images/ContactUs/CotactUs.jpg');
     background-position:center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    text-align: center;
+    text-align: left;
     display: flex;
     color: #fff;
     flex-direction: column;
@@ -1210,6 +1231,8 @@ margin-bottom: 25px;
 .line {
     display: flex;
     align-items: center;
+    margin: 30px 0;
+
 }
 
 .line div:nth-child(2) {
@@ -1235,6 +1258,22 @@ margin-bottom: 25px;
     font-family: 'Open Sans', sans-serif;
 }
 
+.contact_body h2 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    padding: 0.4rem 0;
+    letter-spacing: 4px;
+    font-weight: 600;
+    color: #1F4068;
+    margin: 30px 0;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.contact_body .line {
+    justify-content: center;
+}
+
 .contact_info {
     margin: 2rem 0;
     text-align: center;
@@ -1255,6 +1294,9 @@ margin-bottom: 25px;
     font-size: 2rem;
     padding-bottom: 0.9rem;
     color: #26e5c2;
+}
+.contact_info div span:nth-child(3) {
+    margin: 0.7rem 0;
 }
 
 .contact_info div span:nth-child(2) {
@@ -1280,18 +1322,18 @@ margin-bottom: 25px;
     border : 1.5px solid #c7c7c7;
     border-radius: 5px;
     padding: 0.7rem;
-    margin: 1.6rem 0;
+    margin: 1.3rem 0;
     font-size: 1rem;
     outline: 0;
 }
 .form_control:focus {
     box-shadow: 0 0 9px -3px #206A5D;
 }
-.contact_form form div {
+/* .contact_form form div {
     display: grid;
     grid-template-columns: repeat(2 , 1fr);
     column-gap: 0.6rem;
-}
+} */
 .send_btn {
     font-family:'open sans' sans-serif; 
     font-size: 1rem;
@@ -1317,14 +1359,116 @@ margin-bottom: 25px;
     text-align: center;
 }
 
-@media (min-width: 768px) {
-    .contact_bg .text {
-        width: 70%;
-        margin-left: auto;
-        margin-right: auto;
+.map {
+    width: 95%;
+    height: 60vh;
+    border-radius: 20px;
+    margin: 20px auto;
+}
+
+@media (max-width: 768px) {
+    .contact_body .contact_info {
+        display: flex;
+        flex-direction: column;
     }
-    .contact_info {
-        display: grid;
-        grid-template-columns: repeat(4 , 1fr);
+    .contact_form {
+        display: flex;
+        flex-direction: column;
     }
+   
+}
+
+/* End Contact US PAGE  */
+
+
+/* ################################################################################################################################# */
+/* ################################################################################################################################# */
+/* ################################################################################################################################# */
+
+/* Login PAGE  */
+
+
+/* .navv {
+    display: flex;
+    justify-content: center;
+    background: (0,0,0,0.63);
+    height: 4rem;
+}
+.logo {
+    width: 50%;
+    font-size: 2.5rem;
+    line-height: 4rem;
+    width: rgb(222, 26, 26);
+    padding: 10%;
+    font-weight: 600;
+    text-shadow: 2px 2px 2px #0000;
+}
+
+.nav-right {
+    width: 50%;
+    display: flex;
+    justify-content: end;
+}
+
+.nav-right ul {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+.nav-right ul li {
+    line-height: 4rem;
+}
+.nav-right ul li a {
+    color: rgb(255, 26, 26);
+    font-size: 1.3rem;
+    border : 1px solid rgba(0, 0, 0, 0);
+} */
+
+
+
+/* .nav_links li,a {
+    font-family: monospace;
+    font-weight: 500;
+    font-size: 16;
+    color: #fff;
+    text-decoration: none;
+} */
+
+.navi  {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10px;
+    background-color: #24252A;
+    height: 5vh;
+    font-family:'Times New Roman', Times, serif;
+}
+.logo_navv .logo {
+    cursor: pointer;
+}
+.nav_links {
+    list-style: none;
+}
+.nav_links i {
+    display: inline-block;
+    padding: 0px 20px;
+    font-family:'Times New Roman', Times, serif;
+}
+.nav_links i a {
+    transition: all 0.3s ease 0s;
+}
+.nav_links i a:hover {
+    color: #0088a9;
+}
+.btn_navv a button {
+    padding: 9px 25px;
+    background-color: rgba(0,136,169,1);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    font-family:'Times New Roman', Times, serif;
+}
+.btn_navv a button:hover {
+    background-color: rgba(0,136,169,0);
 }
