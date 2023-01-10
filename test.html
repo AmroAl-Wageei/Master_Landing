@@ -1,42 +1,211 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./test.scss">
-    <title>Test</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Nav </title>
+  <link rel="stylesheet" href="./test.css">
 </head>
+<style>
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+  body {
+    background-color: #e5e5e5;
+    font-family:sans-serif;
+  }
+
+  .main-bar {
+    background-color: #22272b;
+    display: flow-root;
+    padding: 0 10%;
+  }
+
+  #check {
+    display: none;
+  }
+  .logo-header {
+    display: table;
+    float: left;
+    vertical-align: middle;
+    padding: 0;
+    color: #2e8da0;
+    margin:0 ;
+    width: 180px;
+    height: 68px;
+    position: relative;
+    z-index: 9;
+    transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+  }
+
+  .logo-header::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    height: 100%;
+    z-index: -1;
+    right: -50%;
+    width: 80%;
+    transform: skew(30deg);
+    background-color: rgb(39, 93, 111);
+  }
+
+  .logo-header::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    height: 100%;
+    z-index: -1;
+    right: 10%;
+    width: 2000px;
+    transform: skew(30deg);
+    background-color: rgb(169, 178, 181);
+  }
+
+  .logo-header a {
+    color: #22272b;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 70px;
+    text-decoration: none;
+  }
+
+  ul {
+    float: right;
+  }
+
+  nav ul li {
+    display: inline-block;
+    line-height: 70px;
+    border-radius: 14px;
+  }
+
+  nav li.active a {
+    color: bisque;
+    background-color: #2e8da0;
+    border-radius: 14px;
+  }
+
+  nav li  a {
+    padding: 10px 20px;
+    border: 0;
+    margin-bottom: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #e5e5e5;
+    opacity: 1;
+    text-decoration: none;
+    transition: all 0.5s;
+    border-radius: 14px;
+  }
+
+  nav li:hover {
+
+    color: rgb(0, 0, 0);
+    /* background-color: #e5e5e5; */
+  }
+
+  @media (max-width: 1250px) {
+    .main-bar {
+      padding: 0 2%;
+    }
+    nav li a {
+      padding: 15px 20px;
+    }
+  }
+
+  .checkbtn {
+    float: right;
+    width: 20px;
+    height: 18px;
+    position: relative;
+    transform: rotate(0);
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+    top: 25px;
+    display: none;
+}
+
+.checkbtn span {
+  background-color: #fff;
+  display: block;
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  border-radius: 1px;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0);
+  transition: 0.25s ease-in-out;
+}
+
+.checkbtn span:nth-child(1){
+  top: 0;
+}
+.checkbtn span:nth-child(2){
+  top: 7px;
+}
+.checkbtn span:nth-child(3){
+  top: 14px;
+}
+@media (max-width: 992px) {
+    .main-bar {
+      padding: 0 10%;
+    }
+    .checkbtn{
+      display: block;
+      margin-right: 40px;
+    }
+    nav ul  {
+      position: fixed;
+      width: 350px;
+      height: 100vh;
+      background: #22272b;
+      top: 68px;
+      left: -100%;
+      text-align: center;
+      transition: all 0.5s;
+    }
+    nav ul li {
+      display: block;
+      
+    }
+  }
+</style>
 <body>
-    <nav class="navbar navbar-default navbar-fixed-top">
-          <div class="container">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-              <a class="navbar-brand" href="#">Transparent to Solid Nav</a>
-            </div>
-            <div id="navbar" class="collapse navbar-collapse">
-              <ul class="nav navbar-nav navbar-right">
-                <li><a href="#">About</a></li>
-                <li><a href="#">Link</a></li>
-                <li><a href="#">Another Link</a></li>
-              </ul>
-            </div><!--/.nav-collapse -->
-          </div>
-        </nav>
-    
-    <div class="image">
-       <h1 class="heading">Main Heading</h1>
-       <p><button class="btn btn-large">Big Button</button></p>
-    </div>
-    <div class="about">
-       <h2>Main Description</h2>
-       <p>Roll on the floor purring your whiskers off intrigued by the shower burrow under covers, and play time, rub face on everything, intently sniff hand, or pelt around the house and up and down stairs chasing phantoms. Attack feet. Damn that dog shake treat bag under the bed drink water out of the faucet for lick butt love to play with owner's hair tie. Swat at dog give attitude.</p>
-    </div>
-       
-    </body>
+  
+
+  <div class="main-bar">
+    <nav>
+      <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+
+        <div class="logo-header">
+          <a href="#">Dental Clinic</a>
+        </div>
+
+        <ul>
+          <li> <a href="#"> Home </a> </li>
+          <li> <a href="#"> Home </a> </li>
+          <li> <a href="#"> Home </a> </li>
+          <li> <a href="#"> Home </a> </li>
+          <li> <a href="#"> Home </a> </li>
+        </ul>
+
+    </nav>
+
+  </div>
+
+</body>
 </html>
