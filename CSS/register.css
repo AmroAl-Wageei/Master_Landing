@@ -9,10 +9,19 @@ body {
     background: #dfe9f5;
 }
 
-.wrapper {
+.Form_login {
     width: 330px;
     padding: 2rem 1rem;
-    margin: 50px auto;
+    margin: 13% auto;
+    background-color: #fff;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+}
+.Form_register {
+    width: 330px;
+    padding: 2rem 1rem;
+    margin: 10% 41%;
     background-color: #fff;
     border-radius: 10px;
     text-align: center;
@@ -49,7 +58,8 @@ button {
 }
 
 button:hover {
-    background: rgba(17, 107, 143, 0.877);
+    /* background: rgba(17, 107, 143, 0.877); */
+    background: #288876;
 }
 
 input:focus {
@@ -66,13 +76,25 @@ input:focus {
     width: 1rem;
     cursor: pointer;
 }
+
+
 .term label {
     font-size: 0.7rem;
+}
+
+input::-webkit-input-placeholder {
+    color: #288876;
+    opacity: 0.5;
 }
 
 .term a {
     color: rgb(17, 107, 143);
     text-decoration: none;
+}
+
+.term input {
+    color: #288876;
+
 }
 
 .member {
