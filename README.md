@@ -14,3 +14,4 @@ Landing Page
  
  25-12 --> Contact Us Page
 
+10 - 1 --> Login & Register Page
